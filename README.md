@@ -1,24 +1,3 @@
-# README
+# All City Books
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A system for managing inventory, sales, and data analysis for a small book business, using a Rails API backend, a React frontend, and a PostgreSQL database. This is a personal project to help me with my active bookselling business, which is mostly based on Amazon for the moment. This system will help grow that sales channel and branch out into others. 
