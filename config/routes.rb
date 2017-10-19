@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   scope '/api' do
     resources :books
   end
 
-  root to: 'books#index'
+  root to: 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
