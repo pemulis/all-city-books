@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sellersku: MyString
+  asin: MyString
+  binding: MyString
+  itemname: MyString
+  listingid: MyString
+  price: 9.99
+  quantity: 1
+  opendate: 2017-10-18 20:43:56
+  productidtype: 1
+  itemnote: MyString
+  itemcondition: 1
+  willshipinternationally: false
+  expeditedshipping: false
+  productid: MyString
+  pendingquantity: 1
+  fulfillmentchannel: MyString
+  merchantshippinggroup: MyString
+  standardpricepoint: 9.99
+  producttaxcode: MyString
+  source: MyString
+
+two:
+  sellersku: MyString
+  asin: MyString
+  binding: MyString
+  itemname: MyString
+  listingid: MyString
+  price: 9.99
+  quantity: 1
+  opendate: 2017-10-18 20:43:56
+  productidtype: 1
+  itemnote: MyString
+  itemcondition: 1
+  willshipinternationally: false
+  expeditedshipping: false
+  productid: MyString
+  pendingquantity: 1
+  fulfillmentchannel: MyString
+  merchantshippinggroup: MyString
+  standardpricepoint: 9.99
+  producttaxcode: MyString
+  source: MyString
