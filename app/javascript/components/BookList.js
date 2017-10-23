@@ -48,7 +48,8 @@ export default class BookList extends React.Component {
   }
   getBook (id) {
     this.fetch(`api/books/${id}`)
-      .then(book => this.setState({book: book}))
+      .then(book => this.setState({book: book}));
+      window.scrollTo(0,0);
   }
   render() {
     let {books, book} = this.state
@@ -56,8 +57,9 @@ export default class BookList extends React.Component {
 
     ? <div>
         <h1>All City Books</h1>
+        <aside>Click the title of a book in the list below to see its price and description.</aside>
         {book &&
-        <div>
+        <div id='current-book'>
           <h2>{book.itemname}</h2>
           {book.price = book.price.toLocaleString('en-US', { style: 'currency'}) && <p>Price: ${book.price}</p>}
           {book.binding && <p>Binding: {book.binding}</p>}
