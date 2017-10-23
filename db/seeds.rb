@@ -4,29 +4,29 @@ require 'csv'
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'books_09_27_2017.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'utf-8')
 csv.each do |row|
-  b = Book.new
-  b.sellersku = row['seller-sku']
-  b.asin = row['asin1']
-  b.binding = row['binding']
-  b.itemname = row['item-name']
-  b.listingid = row['listing-id']
-  b.price = row['price']
-  b.quantity = row['quantity']
-  b.opendate = row['open-date']
-  b.productidtype = row['product-id-type']
-  b.itemnote = row['item-note']
-  b.itemcondition = row['item-condition']
-  b.willshipinternationally = row['will-ship-internationally']
-  b.expeditedshipping = row['expedited-shipping']
-  b.productid = row['product-id']
-  b.pendingquantity = row['pending-quantity']
-  b.fulfillmentchannel = row['fulfillment-channel']
-  b.merchantshippinggroup = row['merchant-shipping-group']
-  b.standardpricepoint = row['standard-price-point']
-  b.producttaxcode = row['ProductTaxCode']
-  b.source = row['source']
-
-  b.save
+  asin = row['asin1']
+  b = Book.first_or_initialize(asin: asin)
+  b.update_attributes(
+    :sellersku => row['seller-sku'],
+    :binding => row['binding'],
+    :itemname => row['item-name'],
+    :listingid => row['listing-id'],
+    :price => row['price'],
+    :quantity => row['quantity'],
+    :opendate => row['open-date'],
+    :productidtype => row['product-id-type'],
+    :itemnote => row['item-note'],
+    :itemcondition => row['item-condition'],
+    :willshipinternationally => row['will-ship-internationally'],
+    :expeditedshipping => row['expedited-shipping'],
+    :productid => row['product-id'],
+    :pendingquantity => row['pending-quantity'],
+    :fulfillmentchannel => row['fulfillment-channel'],
+    :merchantshippinggroup => row['merchant-shipping-group'],
+    :standardpricepoint => row['standard-price-point'],
+    :producttaxcode => row['ProductTaxCode'],
+    :source => row['source']
+  )
 end
 
 # A test to see if this is creating and saving Book objects
