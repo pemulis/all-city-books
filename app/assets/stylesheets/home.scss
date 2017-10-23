@@ -12,6 +12,16 @@ a {
   &:hover {
     cursor: pointer;
   }
+  &:clicked {
+    font-weight: 900;
+  }
+  &.out-of-stock {
+    color: grey;
+    font-style: italic;
+    text-decoration: none;
+    cursor: default;
+    &::after { content: " - out of stock"; } 
+  }
 }
 
 h1 {

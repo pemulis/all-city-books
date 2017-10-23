@@ -70,9 +70,15 @@ export default class BookList extends React.Component {
         }
         <ul>
           {Object.keys(books).map((key) => {
-            return <li active={book && book.id === books[key].id} key={key} onClick={() => this.getBook(books[key].id) }>
-              <a>{books[key].itemname}</a>
-            </li>
+            if (books[key].quantity > 0) {
+              return <li active={book && book.id === books[key].id} key={key} onClick={() => this.getBook(books[key].id) }>
+                <a>{books[key].itemname}</a>
+              </li>
+            } else {
+              return <li active={book && book.id === books[key].id} key={key} onClick={() => this.getBook(books[key].id) }>
+                <a class='out-of-stock'>{books[key].itemname}</a>
+              </li>
+            }
           })}
         </ul>
       </div>
