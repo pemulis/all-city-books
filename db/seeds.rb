@@ -1,11 +1,11 @@
 # ruby encoding: utf-8
 require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'books_09_27_2017.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'books_10_23_2017_4_46pm.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'utf-8')
 csv.each do |row|
   asin = row['asin1']
-  b = Book.first_or_initialize(asin: asin)
+  b = Book.find_or_initialize_by(asin: asin)
   b.update_attributes(
     :sellersku => row['seller-sku'],
     :binding => row['binding'],
