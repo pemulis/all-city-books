@@ -57,7 +57,7 @@ export default class BookList extends React.Component {
 
     ? <div>
         <h1>All City Books</h1>
-        <aside>Click the title of a book in the list below to see its price and description. Contact me at <a href='mailto:john.d.shutt@gmail.com'>john.d.shutt@gmail.com</a> to order a book for pickup in the Mission neighborhood in San Francisco.</aside>
+        <aside>Click the title of a book in the list below to see its price and description. Contact me at <a href='mailto:jds@riseup.net'>jds@riseup.net</a> to order a book for pickup in the Mission neighborhood in San Francisco.</aside>
         {book &&
         <div id='current-book'>
           <h2>{book.itemname}</h2>
