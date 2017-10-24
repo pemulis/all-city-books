@@ -75,9 +75,12 @@ export default class BookList extends React.Component {
                 <a>{books[key].itemname}</a>
               </li>
             } else {
+              return
+              /*
               return <li active={book && book.id === books[key].id} key={key} onClick={() => this.getBook(books[key].id) }>
                 <a class='out-of-stock'>{books[key].itemname}</a>
               </li>
+              */
             }
           })}
         </ul>
